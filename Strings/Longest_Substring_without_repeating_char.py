@@ -50,6 +50,12 @@ Update max_len as max(max_len, right - left + 1).
 Repeat this until the end of the string.
 '''
 
+#Ofc the edges cases very careful
+if len(s)==0:
+    return 0 
+if len(s)==1:
+    return 1
+
 hm = {}
 max_len = float("-inf")
 left,right = 0,0
