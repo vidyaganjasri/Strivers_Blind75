@@ -1,4 +1,21 @@
 '''
+
+1 one approach we could do is
+we traverse the entire the linked list to get the length , and subtract the value which is the position frmo the end of the linked list at which the node should be deleted so
+now the difference which we will get will allow us to traverse till the node before the actual node to be deleted, and acc we will perform the operatoin
+One thing to keep in mind if they ask to delete the node at positoin k which is the length of linked list we will simply return head.next since they r indirectly asking us to remove the first node
+this takes time complexity O(N)+O(N-k)
+an optimal approach would be
+
+using two pointers fast and slow pointers, we first travsere fast pointers upto k positoins then simulateneously we move fast and
+slow pointer togeater but before that if the fast pointer 
+lands on None then we will simply return head.next as 
+they are indirectly asking us to remove the first node, 
+else we will then simultaneously move the fast and slow pointer togeather until fast .next 
+becomes null at this pointer slow will land on before the node to be deleted then we can perform slow.next = slow.next.next
+
+
+
 Approach 1: Using Length Calculation
 Traverse the Linked List to Find the Length:
 We traverse the entire linked list to determine its length L.
